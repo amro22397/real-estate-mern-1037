@@ -23,7 +23,7 @@ app.use(express.json());
 
 app.use(cookieParser())
 
-const port = process.env.PORT || 4000
+const port = process.env.PORT || 3000
 
 app.listen(port, () => {
     console.log('Server is running on port 4000!!')
