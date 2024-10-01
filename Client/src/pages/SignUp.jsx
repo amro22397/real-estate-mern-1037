@@ -51,6 +51,7 @@ const SignUp = () => {
       style={{fontFamily: 'Trebuchet MS'}}>Sign Up</h1>
 
       <form onSubmit={handleSubmit} className='flex flex-col gap-4 w-[30%] mx-auto'>
+        
         <input type="name" placeholder='username'
         className='border p-3 rounded-lg' id='username'
         onChange={handleChange} />

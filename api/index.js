@@ -15,7 +15,7 @@ mongoose.connect(process.env.MONGO).then(() => {
     console.log(err);
 })
 
-const __dirname = path.resolve();
+
 
 const app = express();
 
@@ -24,6 +24,8 @@ app.use(express.json());
 app.use(cookieParser())
 
 const port = process.env.PORT || 4000
+
+const __dirname = path.resolve();
 
 app.listen(port, () => {
     console.log('Server is running on port 4000!!')

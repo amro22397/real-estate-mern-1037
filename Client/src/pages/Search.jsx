@@ -23,8 +23,8 @@ const Search = () => {
 
     useEffect(() => {
         const urlParams = new URLSearchParams(location.search);
+        const typeFromUrl = urlParams.get('type');
     const searchTermFromUrl = urlParams.get('searchTerm');
-    const typeFromUrl = urlParams.get('type');
     const parkingFromUrl = urlParams.get('parking');
     const furnishedFromUrl = urlParams.get('furnished');
     const offerFromUrl = urlParams.get('offer');
@@ -151,11 +151,15 @@ const Search = () => {
             <form onSubmit={handleSubmit}
             className='flex flex-col gap-8 items-center'>
                 <div className="flex flex-row items-center gap-2 w-[50%]">
+
                     <label className="whitespace-nowrap font-semibold">Search Term:</label>
+
                     <input type="text" id='searchTerm'
                     placeholder='Search...' className='w-[100%] px-3 py-2 rounded-full'
                     value={sidebaradata.searchTerm} 
                     onChange={handleChange} />
+
+                    
                 </div>
             <div className='flex flex-row gap-10'>
             <div className="flex gap-2 flex-wrap items-center">

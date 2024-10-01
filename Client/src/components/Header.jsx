@@ -24,6 +24,7 @@ const Header = () => {
       setSearchTerm(searchTermFromUrl);
     }
   }, [location.search])
+  
   return (
     <header className='bg-slate-200 shadow-md'>
      <div className='flex justify-between items-center max-w-6xl mx-auto p-3'>
@@ -33,9 +34,11 @@ const Header = () => {
         </Link>
 
       <form onSubmit={handleSubmit} className='bg-slate-100 flex items-center px-5 py-2 rounded-full'>
+        
         <input type="text" placeholder='search...' className='bg-transparent focus:outline-0 text-md'
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}/>
+
         <button>
         <FaSearch className='cursor-pointer'/>
         </button>
